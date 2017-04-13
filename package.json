@@ -1,0 +1,97 @@
+{
+  "name": "paste-image-to-qiniu",
+  "displayName": "paste image to qiniu",
+  "description": "截图上传七牛云插件",
+  "version": "0.0.1",
+  "publisher": "favers0601",
+  "author": {
+    "name": "favers",
+    "email": "favers0601@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/favers/vscode-qiniu-upload-image.git"
+  },
+  "homepage": "https://github.com/favers/vscode-qiniu-upload-image/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/favers/vscode-qiniu-upload-image/issues"
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.pasteImageToQiniu"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.pasteImageToQiniu",
+        "title": "Paste Image To Qiniu"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.pasteImageToQiniu",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "pasteImageToQiniu configuration",
+      "properties": {
+        "pasteImageToQiniu.access_key": {
+          "type": "string",
+          "default": "",
+          "description": "一个有效的七牛 AccessKey 签名授权。"
+        },
+        "pasteImageToQiniu.secret_key": {
+          "type": "string",
+          "default": "",
+          "description": "一个有效的七牛 SecretKey 签名授权。"
+        },
+        "pasteImageToQiniu.bucket": {
+          "type": "string",
+          "default": "",
+          "description": "七牛图片上传空间。"
+        },
+        "pasteImageToQiniu.remotePath": {
+          "type": "string",
+          "default": "${fileName}",
+          "description": "七牛图片上传路径，参数化命名。"
+        },
+        "pasteImageToQiniu.domain": {
+          "type": "string",
+          "default": "",
+          "description": "七牛图床域名。"
+        },
+        "pasteImageToQiniu.localPath": {
+          "type": "string",
+          "default": "./img",
+          "description": "图片本地保存位置"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^3.6.0",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "qiniu": "^6.1.13"
+  }
+}
