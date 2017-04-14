@@ -9,6 +9,7 @@
 ```bash
 ext install paste-image-to-qiniu
 ```
+或者在插件应用商店搜索paste-image-to-qiniu安装
 
 ## 参数设置
 ```js
