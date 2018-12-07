@@ -46,7 +46,6 @@ function start() {
     let imagePath = getImagePath(filePath, selectText, localPath);
     const mdFilePath = editor.document.fileName;
     const mdFileName = path.basename(mdFilePath, path.extname(mdFilePath));
-
     createImageDirWithImagePath(imagePath).then(imagePath => {
         saveClipboardImageToFileAndGetPath(imagePath, (imagePath) => {
             if (!imagePath) return;
@@ -60,12 +59,20 @@ function start() {
                 editor.edit(textEditorEdit => {
                     textEditorEdit.insert(editor.selection.active, img)
                 });
+                // 是否删除本地文件
+                if (!config.saveImageToLocal) {
+                    fs.unlink(imagePath, function(err) {
+                        if (err) {
+                            vscode.window.showErrorMessage('Delete tmpfile error. ' + err.toString());
+                        }
+                    })
+                }
             }).catch((err) => {
-                vscode.window.showErrorMessage('Upload error.');
+                vscode.window.showErrorMessage('Upload error. ' + err.toString());
             });
         });
     }).catch(err => {
-        vscode.window.showErrorMessage('Failed make folder.');
+        vscode.window.showErrorMessage('Failed make folder. ' + err.toString());
         return;
     });
 }

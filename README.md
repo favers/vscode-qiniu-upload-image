@@ -32,8 +32,17 @@ ext install paste-image-to-qiniu
     // 七牛图床域名
     "pasteImageToQiniu.domain": "http://xxxxx.xxxx.com",
 
+    // http或者https
+    "pasteImageToQiniu.schema": "http",
+
+    // 存储区域对应 HTTPS 地址，参考七牛官方文档：https://support.qiniu.com/hc/kb/article/210702。当schema为https时需要定义此选项
+    "pasteImageToQiniu.upHttpsHost": "",
+
+    // 是否存储粘贴板图片到本地，值为true的时候请不要定义localPath
+    "pasteImageToQiniu.saveImageToLocal": true,
+
     // 本地储存位置
-    "pasteImageToQiniu.localPath":"./img"
+    "pasteImageToQiniu.localPath":""
 }
 ```
 

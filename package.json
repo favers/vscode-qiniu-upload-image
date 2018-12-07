@@ -68,12 +68,27 @@
         "pasteImageToQiniu.domain": {
           "type": "string",
           "default": "",
-          "description": "七牛图床域名。"
+          "description": "七牛图床域名，需要添加http[s]前缀。"
+        },
+        "pasteImageToQiniu.schema": {
+          "type": "string",
+          "default": "https",
+          "description": "http或者https。"
+        },
+        "pasteImageToQiniu.upHttpsHost": {
+          "type": "string",
+          "default": "https://up-z2.qbox.me",
+          "description": "存储区域对应 HTTPS 地址，参考七牛官方文档：https://support.qiniu.com/hc/kb/article/210702。"
+        },
+        "pasteImageToQiniu.saveImageToLocal": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否需要存储粘贴板图片到本地，值为true时请不要设置localPath。"
         },
         "pasteImageToQiniu.localPath": {
           "type": "string",
-          "default": "./img",
-          "description": "图片本地保存位置"
+          "default": "",
+          "description": "图片本地保存位置。"
         }
       }
     }
