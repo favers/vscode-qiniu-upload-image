@@ -3,10 +3,10 @@
   "displayName": "paste image to qiniu",
   "description": "截图上传七牛云插件",
   "version": "0.0.1",
-  "publisher": "favers",
+  "publisher": "emiyayang",
   "author": {
-    "name": "favers",
-    "email": "favers0601@gmail.com"
+    "name": "emiyayang",
+    "email": "1038810929@qq.com"
   },
   "repository": {
     "type": "git",
