@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/favers/vscode-qiniu-upload-image.git"
+    "url": "https://github.com/EmiyaYang/vscode-qiniu-upload-image.git"
   },
-  "homepage": "https://github.com/favers/vscode-qiniu-upload-image/blob/master/README.md",
+  "homepage": "https://github.com/EmiyaYang/vscode-qiniu-upload-image/blob/master/README.md",
   "bugs": {
-    "url": "https://github.com/favers/vscode-qiniu-upload-image/issues"
+    "url": "https://github.com/EmiyaYang/vscode-qiniu-upload-image/issues"
   },
   "engines": {
     "vscode": "^1.11.0"

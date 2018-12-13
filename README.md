@@ -1,8 +1,14 @@
 # vscode-paste-image-to-qiniu
 
-一个可以支持截图粘贴上传图片到七牛、让你写用vscode写markdown有更好的体验。
+这是一个支持直接粘贴图片文件或截图到 markdown 文档的 vscode 插件，为 vscode 的 md 文档编辑提供了更好的体验。
+
+该项目 fork 自 github 用户 favers 的 [同名项目](https://github.com/favers/vscode-qiniu-upload-image)。 在原有功能基础上新增了一些新特性。因为提了 MR 没回应就自己上了插件。
 
 ![screenshot](./screenshot/screenshot.gif)
+
+## 新特性
+
+在 Mac & Win 平台下可直接复制图片文件，通过插件粘贴到 markdown 文档。
 
 ## 安装
 输入命令：
@@ -36,9 +42,3 @@ ext install paste-image-to-qiniu
     "pasteImageToQiniu.localPath":"./img"
 }
 ```
-
-一直使用vscode来开发、写笔记文章、但是用了几款vscode的图床插件都不是很符合我的需求。今天本来想看看书写点笔记、但是发现截图了去处理图片太过于麻烦、于是有了这个插件、仅仅是想体验一下vscode插件的开发流程、也可以方便自己的写体验。
-
-将[vscode-paste-image](https://github.com/mushanshitiancai/vscode-paste-image)和[vscode-qiniu-upload-image](https://github.com/yscoder/vscode-qiniu-upload-image)综合改成了现在这个插件。
-
-如果用的开心给个star也不错！
